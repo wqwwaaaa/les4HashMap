@@ -1,20 +1,37 @@
 import java.util.HashMap;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        HashMap<String, Double> orders = new HashMap<>();
-        orders.put("Иван И.", 4345.5);
-        orders.put("Ольга С.", 76564.43);
-        orders.put("Александр Т.", 1234.86);
-        orders.put("Александр Р.", 23432.87);
-        orders.put("Екатерина О.", 1034753.6);
-        orders.put("Ярослав В.", 450.0);
+        HashMap<String, ArrayList<Integer>> stateHolidays= new HashMap<>();
 
-        double sum = 0.0; // объявите переменную, где будет сохранена общая сумма
-        for (Double order : orders.values()) { // пройдитесь в цикле по значениям
-            sum += order;
-        }
+        ArrayList<Integer> january = new ArrayList<>();
+        january.add(1);
+        january.add(7);
+        stateHolidays.put("Январь", january);
 
-        System.out.println("Всего было совершено заказов на сумму: " + sum);
+        ArrayList<Integer> february = new ArrayList<>();
+        february.add(23);
+        stateHolidays.put("Февраль", february);
+
+        ArrayList<Integer> march = new ArrayList<>();
+        march.add(8);
+        stateHolidays.put("Март", march);
+
+        ArrayList<Integer> may = new ArrayList<>();
+        may.add(1);
+        may.add(9);
+        stateHolidays.put("Май", may);
+
+        ArrayList<Integer> june = new ArrayList<>();
+        june.add(12);
+        stateHolidays.put("Июнь", june);
+
+        ArrayList<Integer> november = new ArrayList<>();
+        november.add(4);
+        stateHolidays.put("Ноябрь", november);
+
+        System.out.println(stateHolidays);
+
     }
 }
